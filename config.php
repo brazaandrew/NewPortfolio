@@ -1,15 +1,14 @@
 <?php
-// Database configuration for AWS RDS
-define('DB_HOST', 'portfoliodb.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com'); // replace with your RDS endpoint
-define('DB_USER', 'admin'); // your RDS master username
-define('DB_PASS', 'Law_08199823'); // your RDS master password
-define('DB_NAME', 'portfoliodb'); // your RDS database name
+$host = "portfoliodb.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com";
+$username = "admin";  // or your RDS master username
+$password = "Law_08199823";  // your RDS password
+$dbname = "portfoliodb";
 
 try {
-    $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully to AWS RDS!";
-} catch(PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Connected successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
