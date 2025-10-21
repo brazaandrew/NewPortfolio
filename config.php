@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $servername = "portfolioandrewdb.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com";
 $username = "Andrew";
 $password = "Oq6KbsCZ2er1ZeUiwZYp";
@@ -15,4 +18,5 @@ if ($conn->connect_error) {
 
 echo "Connected successfully";
 ?>
+
 
