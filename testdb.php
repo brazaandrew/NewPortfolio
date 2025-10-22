@@ -1,8 +1,9 @@
 <?php
-$servername = "portfoliodb.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com";
+$servername = "personalportfolio.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com";
 $username = "admin";
-$password = "Law_08199823";
-$dbname = "portfoliodb";
+$password = "C1sc012345";
+$dbname = "personalportfolio";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
