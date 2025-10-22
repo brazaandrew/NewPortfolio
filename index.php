@@ -535,7 +535,8 @@
                     <div class="contact-item">https://www.linkedin.com/in/andrew-braza-7954a21b3/</div>
                     <div class="contact-item">https://github.com/brazaandrew</div>
                 </div>
-                <form class="contact-form">
+                
+               <form class="contact-form" method="POST" action="process_contact.php">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -613,4 +614,5 @@
    
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
