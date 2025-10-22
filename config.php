@@ -1,23 +1,22 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-$servername = "personalportfolio.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com";
+$host = "personalportfolio.cpkc6sc8if8f.ap-southeast-2.rds.amazonaws.com";
+$dbname = "portfolioandrew";  // ✅ use your actual RDS database name
 $username = "admin";
 $password = "C1sc012345";
-$dbname = "personalportfolio";
 
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    // Create PDO connection
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    
+    // Set error mode to exceptions
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    // Optional success check
+    // echo "✅ Connected successfully!";
+} catch (PDOException $e) {
+    die("❌ Database connection failed: " . $e->getMessage());
 }
-echo "✅ Connected successfully to RDS database!";
 ?>
-
 
 
 
