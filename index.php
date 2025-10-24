@@ -79,7 +79,7 @@
                     <p>Have a project or opportunity in mind? Let's talk!</p>
                     <p>📧 brazaandrew@gmail.com</p>
                 </div>
-<form method="POST" action="/NewPortfolio10/process_contact.php">
+<form method="POST" action="/NewPortfolio13/process_contact.php">
   <input name="name" required>
   <input type="email" name="email" required>
   <textarea name="message" required></textarea>
@@ -123,4 +123,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
