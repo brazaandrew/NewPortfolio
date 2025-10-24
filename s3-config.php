@@ -14,5 +14,5 @@ $s3 = new S3Client([
     ]
 ]);
 
-$bucket = 'portfolioandrew'; // your S3 bucket name
+$bucket = 'portfolioandrew123'; // your S3 bucket name
 ?>
